@@ -8,7 +8,7 @@ function Hero() {
       <h1 className='font-bold text-2xl text-gray-800'>Lea Tinoso</h1>
       <p className='text-sm'>Full-stack dev with front-end flair and back-end bias.</p>
       <div className='m-4'>
-        <Button text="Get in touch"/>
+        <Button text="Get in touch" link="mailto:lealyn.tinoso@gmail.com" />
       </div>
     </div>
   )

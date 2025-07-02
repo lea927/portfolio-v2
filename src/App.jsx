@@ -2,6 +2,7 @@ import Hero from './components/Hero'
 import Experience from './components/Experience'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
+import WakaTime from './components/WakaTime'
 import Footer from './components/Footer'
 import ThemeProvider from './contexts/ThemeContext'
 
@@ -14,6 +15,7 @@ function App() {
           <Hero />
           <Experience />
           <Projects />
+          <WakaTime />
           <Footer />
         </div>
       </div>

@@ -3,18 +3,21 @@ import Experience from './components/Experience'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
+import ThemeProvider from './contexts/ThemeContext'
 
 function App() {
   return (
-    <div className='bg-gray-50 flex justify-center'>
-      <div className='bg-white w-[728px] shadow-sm'>
-        <Navbar />
-        <Hero />
-        <Experience />
-        <Projects />
-        <Footer />
+    <ThemeProvider>
+      <div className='bg-gray-50 dark:bg-gray-900 flex justify-center transition-colors duration-300'>
+        <div className='bg-white dark:bg-gray-800 w-[728px] shadow-sm transition-colors duration-300'>
+          <Navbar />
+          <Hero />
+          <Experience />
+          <Projects />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </ThemeProvider>
   )
 }
 

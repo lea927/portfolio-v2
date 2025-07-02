@@ -2,11 +2,11 @@ import { projectsData } from '../data/projectsData'
 
 function Projects() {
   return (
-    <div className="text-gray-600 p-12">
-      <h2 className="text-lg font-bold text-gray-800 mb-6">Projects</h2>
+    <div className="text-gray-600 dark:text-gray-300 p-12 transition-colors duration-300">
+      <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-6 transition-colors duration-300">Projects</h2>
       <div className="grid grid-cols-2 gap-4">
         {projectsData.map((project) => (
-          <div key={project.id} className="flex flex-col bg-gray-50 rounded-lg overflow-hidden w-[298px] h-[168px] p-5">
+          <div key={project.id} className="flex flex-col bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden w-[298px] h-[168px] p-5 transition-colors duration-300">
             <div className="h-16 overflow-hidden mb-3">
               <img 
                 src={project.screenshot} 
@@ -15,13 +15,13 @@ function Projects() {
               />
             </div>
             <div className="flex-1 flex justify-between items-center">
-              <h3 className="font-semibold text-gray-800 text-sm truncate flex-1">{project.name}</h3>
+              <h3 className="font-semibold text-gray-800 dark:text-gray-100 text-sm truncate flex-1 transition-colors duration-300">{project.name}</h3>
               <div className="flex gap-2 ml-2">
                 <a 
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-gray-800 transition-colors duration-200"
+                  className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 transition-colors duration-200"
                   title="View Code"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -32,7 +32,7 @@ function Projects() {
                   href={project.deploymentLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-gray-800 transition-colors duration-200"
+                  className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 transition-colors duration-200"
                   title="View Live Demo"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

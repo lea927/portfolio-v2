@@ -2,32 +2,34 @@ import { experienceData } from '../data/experienceData'
 
 function Experience() {
   return (
-    <div className="text-gray-600 p-6">
-      <h2 className="text-xl font-bold text-gray-800 mb-6">Experience</h2>
+    <div className="text-gray-600 p-12">
+      <h2 className="text-lg font-bold text-gray-800 mb-6">Experience</h2>
       <div className="space-y-6">
-        {experienceData.map((experience) => (
-          <div key={experience.id} className="flex gap-4 p-4 bg-gray-50 rounded-lg">
+        {experienceData.map((experience, index) => (
+          <div 
+            key={experience.id} 
+            className={`flex gap-4 p-6 rounded-xl ${
+              index % 2 === 0 ? 'bg-gray-50' : 'bg-transparent'
+            }`}
+          >
             <img 
               src={experience.companyLogo} 
               alt={`${experience.companyName} logo`}
-              className="h-12 w-12 rounded-full object-cover flex-shrink-0"
+              className="h-12 w-12 rounded-full object-cover flex-shrink-0 border border-gray-300"
             />
-            <div className="flex-1">
-              <div className="flex justify-between items-start mb-2">
-                <div>
-                  <h3 className="font-semibold text-gray-800">{experience.role}</h3>
-                  <a 
-                    href={experience.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-medium text-gray-700 hover:text-gray-900 hover:underline transition-colors duration-200"
-                  >
-                    {experience.companyName}
-                  </a>
-                </div>
-                <span className="text-xs text-gray-500">{experience.date}</span>
-              </div>
-              <p className="text-xs text-gray-500 mb-2">{experience.location}</p>
+            <div className="flex-1 flex flex-col gap-3">
+              <p className="text-sm text-gray-500 italic">{experience.date}</p>
+              <a
+                href={experience.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-decoration-none"
+              >
+                <h3 className="font-semibold text-gray-800 hover:underline hover:decoration-gray-400 transition-all duration-200 cursor-pointer">
+                  {experience.role} at {experience.companyName}
+                </h3>
+              </a>
+              <p className="text-sm">{experience.location}</p>
               <p className="text-sm text-gray-600 leading-relaxed">{experience.excerpt}</p>
             </div>
           </div>

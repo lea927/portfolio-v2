@@ -2,8 +2,8 @@ import { projectsData } from '../data/projectsData'
 
 function Projects() {
   return (
-    <div className="text-gray-600 p-6">
-      <h2 className="text-xl font-bold text-gray-800 mb-6">Projects</h2>
+    <div className="text-gray-600 p-12">
+      <h2 className="text-lg font-bold text-gray-800 mb-6">Projects</h2>
       <div className="grid grid-cols-2 gap-4">
         {projectsData.map((project) => (
           <div key={project.id} className="flex flex-col bg-gray-50 rounded-lg overflow-hidden w-[298px] h-[168px] p-5">
